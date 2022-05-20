@@ -10,11 +10,11 @@ public class Post
 
     [Required(ErrorMessage = "Please fill out title")]
     [MinLength(3, ErrorMessage = "Minimum 3 characters")]
-    public string? Title { get; set; }
+    public string Title { get; set; }
 
     [Required]
     [MinLength(10)]
-    public string? Text { get; set; }
+    public string Text { get; set; }
 
     [DataType(DataType.Date)]
     public DateTime Created { get; set; }
@@ -24,7 +24,7 @@ public class Post
     public List<Comment> Comments { get; set; }
 
     public string UserId { get; set; }
-    public IdentityUser? User { get; set; }
+    public IdentityUser User { get; set; }
 
 }
 
